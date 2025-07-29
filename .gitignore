@@ -1,0 +1,48 @@
+# Anaconda virtual environment
+.conda/
+env/
+venv/
+
+# VS Code settings
+.vscode/
+
+# VS Code Python language server (Pylance/Pyright)
+.pylance/
+typings/
+.mypy_cache/
+pyrightconfig.json
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs, dumps, and temp files
+*.log
+*.tmp
+*.cache
+*.bak
+
+# macOS / Windows system files (safe to ignore even on Linux)
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks (optional)
+*.ipynb
+
+# Project-specific local or sensitive files
+config.py
+curr_prompt_cache_file.txt
+youtube_summarizer_service_account_key.json.json
+
+# Databases and cache
+*.db
+*.sqlite
+
+# Build or dist directories (if ever packaging code)
+build/
+dist/
+*.egg-info/
+
+# Docs (if using Sphinx or similar)
+docs/_build/
