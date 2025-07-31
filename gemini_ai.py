@@ -73,8 +73,9 @@ def gemini_streaming_with_fallback_and_cache(
             with open(cache_file_path, "w", encoding=encoding) as f:
                 for chunk in response_stream:
                     if chunk.text:
-                        print(chunk.text, end="", flush=True)
-                        f.write(chunk.text)
+                        # print(chunk.text, end="", flush=True)
+                        f.write(chunk.text)  # Write each chunk to the cache file
+                        f.flush() # Ensure the file is written immediately
                         current_model_response += chunk.text
 
             full_response_text = current_model_response

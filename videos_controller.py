@@ -120,10 +120,14 @@ def fetch_new_youtube_videos():
     create_db()
     print("Fetching new videos...")
     videos = fetch_new_videos()
-    print(f"Fetched {len(videos)} videos from API.")
+    # print(f"Fetched {len(videos)} videos from API.")
     new_count = store_new_videos(videos)
-    print(f"Stored {new_count} new videos in the database.")
-
+    # print(f"Stored {new_count} new videos in the database.")
+    if new_count > 0:
+        print(f"✅ {new_count} new videos stored in the database.")
+    else:
+        print("⚠️ No new videos found or all videos already stored.")
+    return len(videos), new_count
 # Only runs if this file is executed directly
 if __name__ == "__main__":
     fetch_new_youtube_videos()

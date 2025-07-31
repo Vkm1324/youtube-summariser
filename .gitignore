@@ -2,7 +2,7 @@
 .conda/
 env/
 venv/
-
+youtube_summarise.sh
 # VS Code settings
 .vscode/
 
@@ -46,3 +46,7 @@ dist/
 
 # Docs (if using Sphinx or similar)
 docs/_build/
+
+# Ignore any other local or temporary files
+*.log
+*.csv

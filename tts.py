@@ -2,7 +2,6 @@ import os
 import edge_tts
 import random
 
-from videos_controller import update_voice_note_status
 VOICE_LIST = [
     {
         "short_name": "en-US-AnaNeural",
@@ -102,7 +101,6 @@ async def convert_text_to_voice_notes(source_folder, destination_folder):
 
         tts = edge_tts.Communicate(text=f'i am {voice_suffix}'+text, voice=voice)
         await tts.save(dest_path)
-        update_voice_note_status(file_id)
         os.remove(source_path)  # Remove the cached source file after conversion
     print("\n✅ Done! All voice notes saved in:", destination_folder)
     
