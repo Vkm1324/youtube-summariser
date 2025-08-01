@@ -2,6 +2,8 @@ import os
 import edge_tts
 import random
 
+from config import CACHE_FOLDER, VOICE_NOTES_FOLDER
+
 VOICE_LIST = [
     {
         "short_name": "en-US-AnaNeural",
@@ -107,9 +109,8 @@ async def convert_text_to_voice_notes(source_folder, destination_folder):
 if __name__ == "__main__":
     import asyncio
 
-    source_folder = "/home/vk/Desktop/work/personal/youtube_summarizer/demo"
-    destination_folder = "/home/vk/Desktop/work/personal/youtube_summarizer/voice_notes"
-    # # Run the async function 
+    source_folder = CACHE_FOLDER
+    destination_folder = VOICE_NOTES_FOLDER 
     asyncio.run(convert_text_to_voice_notes(source_folder, destination_folder)) 
     exit()  
 

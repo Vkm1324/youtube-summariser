@@ -1,4 +1,4 @@
-from config import GEMINI_API_KEY
+from config import CACHE_FOLDER, GEMINI_API_KEY, VOICE_NOTES_FOLDER
 import google.generativeai as genai
 import re
 import asyncio
@@ -12,8 +12,8 @@ from gemini_ai import (
 from tts import convert_text_to_voice_notes
 
 # === Configuration ===
-source_folder = "/home/vk/Desktop/work/personal/youtube_summarizer/cache"
-destination_folder = "/home/vk/Desktop/AIE_insights/voice_notes"
+source_folder = CACHE_FOLDER
+destination_folder = VOICE_NOTES_FOLDER
 
 log_data = {
     "start_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
